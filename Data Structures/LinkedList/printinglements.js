@@ -1,16 +1,3 @@
-// in java
-// void Print(Node head) {
-//     Node temp = head;
-
-//     while(temp != null) {
-//         System.out.println(temp.data);
-//         temp = temp.next;
-//     }
-
-// }
-
-
-
 function print(list) {
     var temp = list.head
     while(temp != null) {
