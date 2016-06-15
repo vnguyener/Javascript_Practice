@@ -27,6 +27,26 @@ LinkedList.prototype.push = function(val){
     }
   }
 
+LinkedList.prototype.remove = function(node) {
+    var current, value = node.value;
+
+    if(this.head !== null) {
+        if(this.head === node) {
+            this.head = this.head.next;
+            node.next = null;
+            return value;
+        }
+        current = this.head;
+        while(current.next) {
+            if(current.next === node) {
+                current.next = node.next;
+                return value;
+            }
+            current = current.next;
+        }
+    }
+}
+
   var sll = new LinkedList();
 
 //push node
