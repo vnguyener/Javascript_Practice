@@ -19,10 +19,12 @@ let quickSort = (array) => {
 }
 
 let ifSumExists = (array, threshold) => {
+	array.push(threshold);
   let sortedArray = quickSort(array);
   let lowerHalf = sortedArray.splice(0, sortedArray.indexOf(threshold));
   lowerHalf.forEach(num => {
-  	let missingLink = 12 - num;
+  	let missingLink = threshold-num;
+    
     if(lowerHalf.indexOf(missingLink) > -1) {
     	console.log(num + "+" + missingLink + " = " + threshold + ", so true!");
     }
@@ -30,4 +32,4 @@ let ifSumExists = (array, threshold) => {
 }
 
 
-ifSumExists([1, 2, 3, 6, 7, 8, 9, 12, 35, 100, 2, 3], 12)
+ifSumExists([1, 2, 3, 6, 7, 8, 9, 12, 35, 100, 2, 3,123,3,5,7,8,21,233], 15);
