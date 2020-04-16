@@ -17,6 +17,7 @@ const balanceParenthesis = (unbalanceParens) => {
     if (Object.keys(map).includes(currentLetter)) {
       balancedStack.push(currentLetter);
     } else {
+      // get the last element from the balancearray and checks the key/val pair
       let last = balancedStack.pop();
 
       if (currentLetter !== map[last]) return false;
