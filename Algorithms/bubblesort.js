@@ -10,6 +10,7 @@ let bubbleSort = (array) => {
                 array[x + 1] = temp;
             }
         }
+        console.log('array', array)
         if (!hasHadChange) {
             return array;
         }
@@ -21,3 +22,5 @@ let bubbleSort = (array) => {
 // outer for loop to traverse by n times
 // inner loop goes through entire array and compares through the array
 // if left is large we swap
+
+console.log(bubbleSort([1,4,5,2,0,3]))

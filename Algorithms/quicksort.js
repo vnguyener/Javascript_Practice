@@ -15,10 +15,13 @@ let quickSort = (array) => {
             more.push(array[i]);
         }
     }
+    console.log('array', array)
+    console.log('less', less)
+    console.log('more', more)
     return (quickSort(less)).concat([swapValue], quickSort(more));
 }
 
-let arryay = [1,4,15,23,2,3,4,7,55,100,101]
+let arryay = [1,4,15,23,2,3,4,7,55,100,101,3]
 console.log(quickSort(arryay))
 
 // divide and conquer sort with an array

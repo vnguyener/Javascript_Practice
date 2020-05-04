@@ -27,4 +27,6 @@ const balanceParenthesis = (unbalanceParens) => {
   return balancedStack.length === 0;
 };
 
-export default balanceParenthesis;
+console.log(balanceParenthesis('{((}))'))
+console.log(balanceParenthesis('(()}))'))
+console.log(balanceParenthesis('(())'))
